@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConQT Purchase Management</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar px-5 navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img src="./assets/logo.svg" alt="Logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item mr-4">
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle nav-link text-dark"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Product 1</a>
+                <a class="dropdown-item" href="#">Product 2</a>
+                <a class="dropdown-item" href="#">Product 3</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item mr-4">
+            <a class="nav-link text-dark" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ml-auto">
+        <a class="btn btn-primary btn-gradient" href="#">Get Started</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-5 position-relative">
+      <div class="container mb-5 text-center">
+        <h1 class="mb-4">
+          Efficient <span class="hero-green">Purchase Management</span>
+          <br />for Streamlined Operations
+        </h1>
+        <p>
+          The ConQT Purchase Management Module is designed to simplify and
+          streamline your procurement<br />
+          processes. Our advanced features ensure that your purchasing
+          activities are managed efficiently, reducing<br />
+          costs and improving operational performance.
+        </p>
+      </div>
+      <!-- Contact Form -->
+      <div
+        class="container-fluid z-index-2 px-5 d-flex justify-content-around position-relative"
+      >
+        <div>
+          <img
+            src="./assets/hero-element.svg"
+            alt="Image Description"
+            class="img-fluid"
+          />
+        </div>
+        <div class="bg-light text-dark align-self-start contact-form">
+          <h3 class="mb-4">Get in touch with our team</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group input-group-lg col-md-6">
+                <label for="firstName"
+                  >First Name<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="firstName"
+                  required
+                />
+              </div>
+              <div class="form-group input-group-lg col-md-6">
+                <label for="lastName"
+                  >Last Name<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="lastName"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group input-group-lg mt-neg-1">
+              <label for="email">Email<span class="text-danger">*</span></label>
+              <input
+                type="email"
+                class="form-control form-control-lg"
+                id="email"
+                required
+              />
+            </div>
+            <div class="form-group input-group-lg">
+              <label for="phone"
+                >Phone Number<span class="text-danger">*</span></label
+              >
+              <div class="input-group input-group-lg">
+                <div
+                  class="input-group-prepend input-group-lg inputGroup-sizing-sm"
+                >
+                  <select class="form-control form-control-lg" id="countryCode">
+                    <option value="+91">+91</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                  </select>
+                </div>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="phoneNumber"
+                  aria-describedby="phone-addon"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group input-group-lg mt-neg-1">
+              <label for="message">Message</label>
+              <textarea
+                class="form-control"
+                placeholder="Type your message..."
+                id="message"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="form-group input-group-lg">
+              <label for="howDidYouHear">How did you hear about us?</label>
+              <select class="form-control form-control-lg" id="howDidYouHear">
+                <option class="text-muted" value="" disabled selected>
+                  Select one
+                </option>
+                <option value="Website">Website</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend/Family">Friend/Family</option>
+                <option value="Advertisement">Advertisement</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <!-- Checkbox to accept the terms -->
+            <div class="form-group form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="acceptTerms"
+                required
+              />
+              <p>
+                I accept the <a href="#" class="text-dark"><u>Terms</u></a>
+              </p>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-gradient btn-block btn-lg"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Element container -->
+      <div class="hero-element-container z-index-1 position-absolute">
+        <div class="element"></div>
+        <div class="element"></div>
+
+        <div class="element"></div>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="core-features-section py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">
+          Core Features of Purchase<br />
+          Management Module
+        </h2>
+        <p class="mb-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros<br />
+          elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+          interdum nulla, ut commodo<br />
+          diam libero vitae erat.
+        </p>
+      </div>
+
+      <div class="d-flex container-fluid px-5 text-center">
+        <div
+          class="d-flex flex-item flex-column px-5 justify-content-between"
+          style="flex: 0 0 25%"
+        >
+          <div>
+            <img
+              src="./assets/note-icon.svg"
+              class="rounded mx-auto d-block mb-4"
+              alt="note"
+            />
+
+            <h5 class="mb-4">Automated Purchase Orders</h5>
+            <p>
+              Automate your purchase orders to reduce manual intervention and
+              minimize errors.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="./assets/approval-icon.svg"
+              class="rounded mx-auto d-block mb-4"
+              alt="Approval"
+            />
+
+            <h5 class="mb-4">Approval Workflows</h5>
+            <p>
+              Implement customizable approval workflows to ensure all purchases
+              are authorized before being finalized.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex-item d-flex justify-content-center"
+          style="flex: 0 0 50%"
+        >
+          <img
+            src="./assets/video-slider.svg"
+            alt="Video Slider"
+            class="img-fluid"
+          />
+        </div>
+        <div
+          class="d-flex flex-item flex-column justify-content-between px-5"
+          style="flex: 0 0 25%"
+        >
+          <div>
+            <img
+              src="./assets/supply-icon.svg"
+              class="rounded mx-auto d-block mb-4"
+              alt="Supply"
+            />
+
+            <h5 class="mb-4">Supplier Management</h5>
+            <p>
+              Maintain detailed records of your suppliers, including contact
+              information, performance metrics, and transaction history.
+            </p>
+          </div>
+          <div>
+            <img
+              src="./assets/analytics-reporting-icon.svg"
+              class="rounded mx-auto d-block mb-4"
+              alt="Analytics"
+            />
+
+            <h5 class="mb-4">Analytics and Reporting</h5>
+            <p>
+              Gain insights into your purchasing activities with advanced
+              analytics and reporting tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section gradient-bg py-5 bg-light">
+      <h2 class="text-center">
+        Benefits of Using ConQT Purchase<br />
+        Management
+      </h2>
+
+      <div
+        class="container-fluid z-index-2 d-flex justify-content-around position-relative"
+      >
+        <div>
+          <img
+            src="./assets/laptop-placeholder.svg"
+            alt="Image Description"
+            class="img-fluid mr-5"
+          />
+        </div>
+
+        <div
+          class="d-flex align-items-start flex-column justify-content-center p-5"
+        >
+          <div class="mb-4 position-relative">
+            <div class="vertical-bar benefit-bar position-absolute"></div>
+            <h4 class="mb-3">Improved Efficiency</h4>
+            <p>
+              Streamline your purchasing process, reduce manual tasks, and
+              increase overall efficiency.
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <h4 class="mb-3">Cost Savings</h4>
+            <p>
+              Reduce procurement costs through better supplier management and
+              budget control.
+            </p>
+          </div>
+          <div class="mb-4">
+            <h4 class="mb-3">Enhanced Visibility</h4>
+            <p>
+              Gain complete visibility into your procurement activities with
+              real-time tracking and reporting.
+            </p>
+          </div>
+          <div class="mb-4">
+            <h4 class="mb-3">Better Decision Making</h4>
+            <p>
+              Make informed purchasing decisions based on comprehensive data and
+              analytics.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-element-container z-index-1 position-absolute">
+        <div class="element"></div>
+        <div class="element"></div>
+      </div>
+    </section>
+
+    <!-- User Testimonials -->
+    <section class="user-testimonials-section py-5">
+      <div class="container text-center position-relative">
+        <h2 class="gradient-text">What Our Users Say</h2>
+
+        <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+          <label class="btn toggle-btn active mr-3" id="btn-customers">
+            <input type="radio" name="options" autocomplete="off" checked />
+            Customers
+          </label>
+          <label class="btn toggle-btn" id="btn-vendors">
+            <input type="radio" name="options" autocomplete="off" /> Vendors
+          </label>
+        </div>
+        <div
+          id="testimonials-slider"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+              </div>
+
+              <p class="user-review mb-4">
+                “Self-registering through the portal was simple and<br />
+                straightforward. It made the whole process smooth and
+                efficient.”
+              </p>
+              <div class="d-inline-flex mb-5">
+                <img
+                  src="./assets/sample-profile-img.svg"
+                  alt="Profile Image"
+                  class="profile-img mr-4 img-fluid"
+                />
+
+                <div class="vendor-info-container pr-3">
+                  <h5>Mark L.</h5>
+                  <h6 class="text-muted">Vendor CEO</h6>
+                </div>
+
+                <img
+                  src="./assets/vendor-company.svg"
+                  alt="Vendor Company Logo"
+                  class="ml-4 img-fluid"
+                />
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+                <p class="star"></p>
+              </div>
+
+              <p class="user-review mb-4">
+                “Self-registering through the portal was simple and<br />
+                straightforward. It made the whole process smooth and
+                efficient.”
+              </p>
+              <div class="d-inline-flex mb-5">
+                <img
+                  src="./assets/sample-profile-img.svg"
+                  alt="Profile Image"
+                  class="profile-img mr-4 img-fluid"
+                />
+
+                <div class="vendor-info-container pr-3">
+                  <h5>Mark L.</h5>
+                  <h6 class="text-muted">Vendor CEO</h6>
+                </div>
+
+                <img
+                  src="./assets/vendor-company.svg"
+                  alt="Vendor Company Logo"
+                  class="ml-4 img-fluid"
+                />
+              </div>
+            </div>
+
+            <!-- Add more testimonials here -->
+          </div>
+          <ol class="custom-carousel-indicators carousel-indicators">
+            <li
+              data-target="#testimonials-slider"
+              data-slide-to="0"
+              class="active mr-1"
+            ></li>
+            <li data-target="#testimonials-slider" data-slide-to="1"></li>
+          </ol>
+        </div>
+
+        <div class="custom-carousel-nav d-inline-flex position-absolute">
+          <a
+            href="#testimonials-slider"
+            role="button"
+            data-slide="prev"
+            class="mr-2"
+          >
+            <img
+              aria-hidden="true"
+              src="./assets/left-arrow.svg"
+              alt="left arrow"
+              class="img-fluid rounded"
+            />
+          </a>
+          <a href="#testimonials-slider" role="button" data-slide="next">
+            <img
+              aria-hidden="true"
+              src="./assets/right-arrow.svg"
+              alt="right arrow"
+              class="img-fluid rounded"
+            />
+            <!-- <span  aria-hidden="true">&rarr;</span> -->
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories-section py-5 bg-light">
+      <div class="container-fluid px-5 text-center">
+        <h2 class="gradient-text mb-5">Success Stories</h2>
+        <div class="row px-5">
+          <div class="col-md-4">
+            <div class="card no-border">
+              <img
+                src="./assets//placeholder-image.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 class="card-title">
+                  How Company A Reduced Onboarding Time by 50% 
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card no-border">
+              <img
+                src="./assets//placeholder-image.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Enhancing Data Accuracy and Reducing Errors for Company B
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card no-border">
+              <img
+                src="./assets//placeholder-image.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Boosting Vendor Satisfaction and Efficiency for Company C 
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-gradient text-white mt-4">View all</button>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="p-5">
+      <div class="container-fluid d-flex gradient-bg pt-5 pl-4 cta-section">
+        <div class="px-5">
+          <h2>
+            Transform your procurement<br />
+            process with ConQT.
+          </h2>
+          <p>
+            Discover how ConQT can transform your procurement process. Start
+            your journey with us today. Streamline your procurement process and
+            enhance efficiency with ConQT's Purchase Management Module. Start
+            optimizing today!
+          </p>
+          <button class="btn btn-light text-blue p-2">Get Started</button>
+          <button type="button" class="btn btn-outline-light p-2">
+            Enquiry
+          </button>
+        </div>
+
+        <div>
+          <img src="./assets/cta-img.svg" alt="CTA Image" class="float-right" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Notfied/Newsletter -->
+    <section class="notifications-section">
+      <div
+        class="container-fluid px-5 d-flex align-items-center justify-content-between"
+      >
+        <div class="p-4">
+          <h5>Get notified when we launch</h5>
+          <p>Stay up to date with the latest new, annoucement and articles.</p>
+        </div>
+
+        <div class="p-5">
+          <form class="d-flex">
+            <div class="form-group mr-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                aria-describedby="emailHelp"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-gradient-2 btn-primary text-white align-self-start"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer position-relative">
+      <div
+        class="container-fluid px-5 d-flex justify-content-between z-index-3 position-relative"
+      >
+        <div class="company-info-footer">
+          <img src="assets/logo.svg" class="logo mb-3" />
+          <div class="d-flex align-items-start">
+            <img src="assets/location.svg" class="mr-2" />
+            <p>51 Goldhill Plaza #07-07 Singapore 308900</p>
+          </div>
+
+          <div class="d-flex align-items-start">
+            <img src="assets/phone.svg" class="mr-2" />
+            <p>Phone: +66 98 865 6621</p>
+          </div>
+          <div class="d-flex align-items-start">
+            <img src="assets/mail.svg" class="mr-2" />
+            <p>Email: info@conqt.com</p>
+          </div>
+          <div class="d-flex align-items-start">
+            <img src="assets/clock.svg" class="mr-2" />
+            <p>Hours: Monday - Friday 9:00AM - 6:00PM</p>
+          </div>
+
+          <div>
+            <a href="#"><img src="./assets/linkedin.svg" class="icon" /></a>
+            <a href="#"><img src="./assets/facebook.svg" class="icon" /></a>
+            <a href="#"><img src="./assets/yt.svg" class="icon" /></a>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="mx-5">
+            <h5>Solutions</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+
+          <div class="mx-5">
+            <h5>Products</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+
+          <div class="mx-5">
+            <h5>About us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+
+          <div class="mx-5">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="assets/footer-vector.svg"
+        class="footer-vector-1 position-absolute z-index-2"
+      />
+      <img
+        src="assets/footer-vector2.svg"
+        class="footer-vector-2 position-absolute z-index-1"
+      />
+    </footer>
+
+    <div class="footer-bottom text-white">
+      <div class="container-fluid px-5 py-2">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            Copyright © 2024 ConQT. All rights reserved.
+          </div>
+          <div class="col-md-6 text-md-right">
+            <a href="#" class="text-white">Privacy Policy</a>
+            <a href="#" class="text-white">Terms and Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
